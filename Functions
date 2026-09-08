@@ -1,0 +1,198 @@
+1. Function for Addition:
+#include <stdio.h>
+void add() {
+    int a,b;
+    printf("Enter two numbers: ");
+    scanf("%d%d",&a,&b);
+    printf("Sum = %d",a+b);
+}
+int main() {
+    add();
+    return 0;
+}
+
+2. Function for Even/Odd:
+#include <stdio.h>
+void check() {
+    int n;
+    printf("Enter a number: ");
+    scanf("%d",&n);
+    if(n%2==0)
+        printf("Even");
+    else
+        printf("Odd");
+}
+int main() {
+    check();
+    return 0;
+}
+
+3. Function for Factorial:
+#include <stdio.h>
+void factorial() {
+    int n,i,fact=1;
+    printf("Enter a number: ");
+    scanf("%d",&n);
+    for(i=1;i<=n;i++)
+        fact=fact*i;
+    printf("Factorial = %d",fact);
+}
+int main() {
+    factorial();
+    return 0;
+}
+
+4. Function for Prime Number:
+#include <stdio.h>
+void prime() {
+    int n,i,count=0;
+    printf("Enter a number: ");
+    scanf("%d",&n);
+    for(i=1;i<=n;i++)
+        if(n%i==0)
+            count++;
+    if(count==2)
+        printf("Prime Number");
+    else
+        printf("Not Prime Number");
+}
+int main() {
+    prime();
+    return 0;
+}
+
+5. Function for Palindrome:
+#include <stdio.h>
+void palindrome() {
+    int n,temp,rev=0,rem;
+    printf("Enter a number: ");
+    scanf("%d",&n);
+    temp=n;
+    while(n!=0) {
+        rem=n%10;
+        rev=rev*10+rem;
+        n=n/10;
+    }
+    if(temp==rev)
+        printf("Palindrome");
+    else
+        printf("Not Palindrome");
+}
+int main() {
+    palindrome();
+    return 0;
+}
+
+6. Function for Armstrong Number:
+#include <stdio.h>
+void armstrong() {
+    int n,temp,rem,sum=0;
+    printf("Enter a number: ");
+    scanf("%d",&n);
+    temp=n;
+    while(n!=0) {
+        rem=n%10;
+        sum=sum+rem*rem*rem;
+        n=n/10;
+    }
+    if(temp==sum)
+        printf("Armstrong Number");
+    else
+        printf("Not Armstrong Number");
+}
+int main() {
+    armstrong();
+    return 0;
+}
+
+7. Function for Fibonacci Series:
+#include <stdio.h>
+void fibonacci() {
+    int n,a=0,b=1,c,i;
+    printf("Enter number of terms: ");
+    scanf("%d",&n);
+    for(i=1;i<=n;i++) {
+        printf("%d ",a);
+        c=a+b;
+        a=b;
+        b=c;
+    }
+}
+int main() {
+    fibonacci();
+    return 0;
+}
+
+8. Function for GCD:
+#include <stdio.h>
+void gcd() {
+    int a,b,i,g=1;
+    printf("Enter two numbers: ");
+    scanf("%d%d",&a,&b);
+    for(i=1;i<=a&&i<=b;i++)
+        if(a%i==0&&b%i==0)
+            g=i;
+    printf("GCD = %d",g);
+}
+int main() {
+    gcd();
+    return 0;
+}
+
+9. Function with Arguments:
+#include <stdio.h>
+void add(int a,int b) {
+    printf("Sum = %d",a+b);
+}
+int main() {
+    int a,b;
+    printf("Enter two numbers: ");
+    scanf("%d%d",&a,&b);
+    add(a,b);
+    return 0;
+}
+
+10. Function with Return Value:
+#include <stdio.h>
+int add(int a,int b) {
+    return a+b;
+}
+int main() {
+    int a,b,sum;
+    printf("Enter two numbers: ");
+    scanf("%d%d",&a,&b);
+    sum=add(a,b);
+    printf("Sum = %d",sum);
+    return 0;
+}
+
+11. Recursive Factorial:
+#include <stdio.h>
+int factorial(int n) {
+    if(n==0)
+        return 1;
+    return n*factorial(n-1);
+}
+int main() {
+    int n;
+    printf("Enter a number: ");
+    scanf("%d",&n);
+    printf("Factorial = %d",factorial(n));
+    return 0;
+}
+
+12. Recursive Fibonacci:
+#include <stdio.h>
+int fibonacci(int n) {
+    if(n<=1)
+        return n;
+    return fibonacci(n-1)+fibonacci(n-2);
+}
+int main() {
+    int n,i;
+    printf("Enter number of terms: ");
+    scanf("%d",&n);
+    for(i=0;i<n;i++)
+        printf("%d ",fibonacci(i));
+    return 0;
+}
