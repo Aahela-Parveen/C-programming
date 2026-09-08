@@ -1,0 +1,278 @@
+1. Print Numbers 1 to N:
+#include <stdio.h>
+int main() {
+    int n,i;
+    printf("Enter N: ");
+    scanf("%d",&n);
+    for(i=1;i<=n;i++)
+        printf("%d ",i);
+    return 0;
+}
+
+2. Print Even Numbers:
+#include <stdio.h>
+int main() {
+    int n,i;
+    printf("Enter N: ");
+    scanf("%d",&n);
+    for(i=1;i<=n;i++)
+        if(i%2==0)
+            printf("%d ",i);
+    return 0;
+}
+
+3. Print Odd Numbers:
+#include <stdio.h>
+int main() {
+    int n,i;
+    printf("Enter N: ");
+    scanf("%d",&n);
+    for(i=1;i<=n;i++)
+        if(i%2!=0)
+            printf("%d ",i);
+    return 0;
+}
+
+4. Print Multiplication Table:
+#include <stdio.h>
+int main() {
+    int n,i;
+    printf("Enter a number: ");
+    scanf("%d",&n);
+    for(i=1;i<=10;i++)
+        printf("%d x %d = %d\n",n,i,n*i);
+    return 0;
+}
+
+5. Find Sum of First N Numbers:
+#include <stdio.h>
+int main() {
+    int n,i,sum=0;
+    printf("Enter N: ");
+    scanf("%d",&n);
+    for(i=1;i<=n;i++)
+        sum=sum+i;
+    printf("Sum = %d",sum);
+    return 0;
+}
+
+6. Find Sum of Even Numbers:
+#include <stdio.h>
+int main() {
+    int n,i,sum=0;
+    printf("Enter N: ");
+    scanf("%d",&n);
+    for(i=1;i<=n;i++)
+        if(i%2==0)
+            sum=sum+i;
+    printf("Sum of Even Numbers = %d",sum);
+    return 0;
+}
+
+7. Find Sum of Odd Numbers:
+#include <stdio.h>
+int main() {
+    int n,i,sum=0;
+    printf("Enter N: ");
+    scanf("%d",&n);
+    for(i=1;i<=n;i++)
+        if(i%2!=0)
+            sum=sum+i;
+    printf("Sum of Odd Numbers = %d",sum);
+    return 0;
+}
+
+8. Find Factorial:
+#include <stdio.h>
+int main() {
+    int n,i,fact=1;
+    printf("Enter a number: ");
+    scanf("%d",&n);
+    for(i=1;i<=n;i++)
+        fact=fact*i;
+    printf("Factorial = %d",fact);
+    return 0;
+}
+
+9. Count Digits:
+#include <stdio.h>
+int main() {
+    int n,count=0;
+    printf("Enter a number: ");
+    scanf("%d",&n);
+    while(n!=0) {
+        n=n/10;
+        count++;
+    }
+    printf("Number of digits = %d",count);
+    return 0;
+}
+
+10. Reverse a Number:
+#include <stdio.h>
+int main() {
+    int n,rev=0,rem;
+    printf("Enter a number: ");
+    scanf("%d",&n);
+    while(n!=0) {
+        rem=n%10;
+        rev=rev*10+rem;
+        n=n/10;
+    }
+    printf("Reverse = %d",rev);
+    return 0;
+}
+
+11. Find Sum of Digits:
+#include <stdio.h>
+int main() {
+    int n,sum=0,rem;
+    printf("Enter a number: ");
+    scanf("%d",&n);
+    while(n!=0) {
+        rem=n%10;
+        sum=sum+rem;
+        n=n/10;
+    }
+    printf("Sum of Digits = %d",sum);
+    return 0;
+}
+
+12. Find Product of Digits:
+#include <stdio.h>
+int main() {
+    int n,product=1,rem;
+    printf("Enter a number: ");
+    scanf("%d",&n);
+    while(n!=0) {
+        rem=n%10;
+        product=product*rem;
+        n=n/10;
+    }
+    printf("Product of Digits = %d",product);
+    return 0;
+}
+
+13. Check Palindrome Number:
+#include <stdio.h>
+int main() {
+    int n,temp,rev=0,rem;
+    printf("Enter a number: ");
+    scanf("%d",&n);
+    temp=n;
+    while(n!=0) {
+        rem=n%10;
+        rev=rev*10+rem;
+        n=n/10;
+    }
+    if(temp==rev)
+        printf("Palindrome");
+    else
+        printf("Not Palindrome");
+    return 0;
+}
+
+14. Check Armstrong Number:
+#include <stdio.h>
+int main() {
+    int n,temp,rem,sum=0;
+    printf("Enter a number: ");
+    scanf("%d",&n);
+    temp=n;
+    while(n!=0) {
+        rem=n%10;
+        sum=sum+(rem*rem*rem);
+        n=n/10;
+    }
+    if(temp==sum)
+        printf("Armstrong Number");
+    else
+        printf("Not Armstrong Number");
+    return 0;
+}
+
+15. Check Prime Number:
+#include <stdio.h>
+int main() {
+    int n,i,count=0;
+    printf("Enter a number: ");
+    scanf("%d",&n);
+    for(i=1;i<=n;i++)
+        if(n%i==0)
+            count++;
+    if(count==2)
+        printf("Prime Number");
+    else
+        printf("Not Prime Number");
+    return 0;
+}
+
+16. Print Prime Numbers in a Range:
+#include <stdio.h>
+int main() {
+    int start,end,i,j,count;
+    printf("Enter range: ");
+    scanf("%d%d",&start,&end);
+    for(i=start;i<=end;i++) {
+        count=0;
+        for(j=1;j<=i;j++)
+            if(i%j==0)
+                count++;
+        if(count==2)
+            printf("%d ",i);
+    }
+    return 0;
+}
+
+17. Find GCD / HCF:
+#include <stdio.h>
+int main() {
+    int a,b,i,gcd=1;
+    printf("Enter two numbers: ");
+    scanf("%d%d",&a,&b);
+    for(i=1;i<=a && i<=b;i++)
+        if(a%i==0 && b%i==0)
+            gcd=i;
+    printf("GCD = %d",gcd);
+    return 0;
+}
+
+18. Find LCM:
+#include <stdio.h>
+int main() {
+    int a,b,lcm;
+    printf("Enter two numbers: ");
+    scanf("%d%d",&a,&b);
+    lcm=a>b?a:b;
+    while(lcm%a!=0 || lcm%b!=0)
+        lcm++;
+    printf("LCM = %d",lcm);
+    return 0;
+}
+
+19. Generate Fibonacci Series:
+#include <stdio.h>
+int main() {
+    int n,a=0,b=1,c,i;
+    printf("Enter number of terms: ");
+    scanf("%d",&n);
+    for(i=1;i<=n;i++) {
+        printf("%d ",a);
+        c=a+b;
+        a=b;
+        b=c;
+    }
+    return 0;
+}
+
+20. Find Power of a Number:
+#include <stdio.h>
+int main() {
+    int base,exp,result=1,i;
+    printf("Enter base and exponent: ");
+    scanf("%d%d",&base,&exp);
+    for(i=1;i<=exp;i++)
+        result=result*base;
+    printf("Power = %d",result);
+    return 0;
+}
