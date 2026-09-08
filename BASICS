@@ -1,0 +1,168 @@
+1.	Hello World :
+#include <stdio.h>
+int main() {
+    printf("Hello, World!");
+    return 0;
+}
+
+2.	Print Name, Age, College :
+#include <stdio.h>
+int main() {
+    char name[50];
+    int age;
+    char college[100];
+    printf("Enter name: ");
+    scanf(" %[^\n]",name);
+    printf("Enter age: ");
+    scanf("%d",&age);
+    printf("Enter college: ");
+    scanf(" %[^\n]",college);
+    printf("\n--- Student Details ---\n");
+    printf("Name: %s\n",name);
+    printf("Age: %d\n",age);
+    printf("College: %s",college);
+    return 0;
+}
+
+3.	Add Two Numbers :
+#include <stdio.h>
+int main() {
+    int a,b,sum;
+    printf("Enter two numbers: ");
+    scanf("%d%d",&a,&b);
+    sum=a+b;
+    printf("Sum = %d",sum);
+    return 0;
+}
+
+4.	Subtract Two Numbers :
+#include <stdio.h>
+int main() {
+    int a,b,difference;
+    printf("Enter two numbers: ");
+    scanf("%d%d",&a,&b);
+    difference=a-b;
+    printf("Difference = %d",difference);
+    return 0;
+}
+
+5.	Multiply Two Numbers : 
+#include <stdio.h>
+int main() {
+    int a,b,product;
+    printf("Enter two numbers: ");
+    scanf("%d%d",&a,&b);
+    product=a*b;
+    printf("Product = %d",product);
+    return 0;
+}
+
+6.	Divide Two Numbers :
+#include <stdio.h>
+int main() {
+    float a,b,result;
+    printf("Enter two numbers: ");
+    scanf("%f%f",&a,&b);
+    result=a/b;
+    printf("Result = %.2f",result);
+    return 0;
+}
+
+7.	Swap Two Numbers :
+#include <stdio.h>
+int main() {
+    int a,b,temp;
+    printf("Enter two numbers: ");
+    scanf("%d%d",&a,&b);
+    printf("Before swapping: a=%d b=%d\n",a,b);
+    temp=a;
+    a=b;
+    b=temp;
+    printf("After swapping: a=%d b=%d",a,b);
+    return 0;
+}
+
+8.	Swap Without Third Variable :
+#include <stdio.h>
+int main() {
+    int a,b;
+    printf("Enter two numbers: ");
+    scanf("%d%d",&a,&b);
+    printf("Before swapping: a=%d b=%d\n",a,b);
+    a=a+b;
+    b=a-b;
+    a=a-b;
+    printf("After swapping: a=%d b=%d",a,b);
+    return 0;
+}
+
+9.	Find ASCII Value :
+#include <stdio.h>
+int main() {
+    char ch;
+    printf("Enter a character: ");
+    scanf("%c",&ch);
+    printf("ASCII value = %d",ch);
+    return 0;
+}
+
+10.	Calculate Simple Interest :
+#include <stdio.h>
+int main() {
+    float p,r,t,si;
+    printf("Enter principal, rate and time: ");
+    scanf("%f%f%f",&p,&r,&t);
+    si=(p*r*t)/100;
+    printf("Simple Interest = %.2f",si);
+    return 0;
+}
+
+11.	Calculate Area of Circle :
+#include <stdio.h>
+int main() {
+    float r,area;
+    printf("Enter radius: ");
+    scanf("%f",&r);
+    area=3.14*r*r;
+    printf("Area of Circle = %.2f",area);
+    return 0;
+}
+
+12.	Calculate Area of Rectangle : 
+#include <stdio.h>
+int main() {
+    float length,width,area;
+    printf("Enter length and width: ");
+    scanf("%f%f",&length,&width);
+    area=length*width;
+    printf("Area of Rectangle = %.2f",area);
+    return 0;
+}
+
+13.	Convert Celsius to Fahrenheit :
+#include <stdio.h>
+int main() {
+    float c,f;
+    printf("Enter temperature in Celsius: ");
+    scanf("%f",&c);
+    f=(c*9/5)+32;
+    printf("Temperature in Fahrenheit = %.2f",f);
+    return 0;
+}
+
+14.	Convert Days into Years, Months & Days :
+#include <stdio.h>
+int main() {
+    int days,years,months;
+    printf("Enter number of days: ");
+    scanf("%d",&days);
+    years=days/365;
+    days=days%365;
+    months=days/30;
+    days=days%30;
+    printf("Years = %d\n",years);
+    printf("Months = %d\n",months);
+    printf("Days = %d",days);
+    return 0;
+}
+
