@@ -1,0 +1,232 @@
+1. Check Even or Odd:
+#include <stdio.h>
+int main() {
+    int n;
+    printf("Enter a number: ");
+    scanf("%d",&n);
+    if(n%2==0)
+        printf("Even");
+    else
+        printf("Odd");
+    return 0;
+}
+
+2.Check Positive, Negative or Zero:
+#include <stdio.h>
+int main() {
+    int n;
+    printf("Enter a number: ");
+    scanf("%d",&n);
+    if(n>0)
+        printf("Positive");
+    else if(n<0)
+        printf("Negative");
+    else
+        printf("Zero");
+    return 0;
+}
+
+3.Find Largest of Two Numbers :
+#include <stdio.h>
+int main() {
+    int a,b;
+    printf("Enter two numbers: ");
+    scanf("%d%d",&a,&b);
+    if(a>b)
+        printf("Largest = %d",a);
+    else
+        printf("Largest = %d",b);
+    return 0;
+}
+
+4.Find Largest of Three Numbers :
+#include <stdio.h>
+int main() {
+    int a,b,c;
+    printf("Enter three numbers: ");
+    scanf("%d%d%d",&a,&b,&c);
+    if(a>b && a>c)
+        printf("Largest = %d",a);
+    else if(b>c)
+        printf("Largest = %d",b);
+    else
+        printf("Largest = %d",c);
+    return 0;
+}
+
+5.Find Smallest of Two Numbers :
+#include <stdio.h>
+int main() {
+    int a,b;
+    printf("Enter two numbers: ");
+    scanf("%d%d",&a,&b);
+    if(a<b)
+        printf("Smallest = %d",a);
+    else
+        printf("Smallest = %d",b);
+    return 0;
+}
+
+6.Check Leap Year :
+#include <stdio.h>
+int main() {
+    int year;
+    printf("Enter year: ");
+    scanf("%d",&year);
+    if(year%400==0 || (year%4==0 && year%100!=0))
+        printf("Leap Year");
+    else
+        printf("Not a Leap Year");
+    return 0;
+}
+
+7.Check Vowel or Consonant :
+#include <stdio.h>
+int main() {
+    char ch;
+    printf("Enter a character: ");
+    scanf(" %c",&ch);
+    if(ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u'||ch=='A'||ch=='E'||ch=='I'||ch=='O'||ch=='U')
+        printf("Vowel");
+    else
+        printf("Consonant");
+    return 0;
+}
+
+8.Check Alphabet, Digit or Special Character :
+#include <stdio.h>
+int main() {
+    char ch;
+    printf("Enter a character: ");
+    scanf(" %c",&ch);
+    if((ch>='a'&&ch<='z')||(ch>='A'&&ch<='Z'))
+        printf("Alphabet");
+    else if(ch>='0'&&ch<='9')
+        printf("Digit");
+    else
+        printf("Special Character");
+    return 0;
+}
+
+9.Check Eligible to Vote :
+#include <stdio.h>
+int main() {
+    int age;
+    printf("Enter your age: ");
+    scanf("%d",&age);
+    if(age>=18)
+        printf("Eligible to Vote");
+    else
+        printf("Not Eligible to Vote");
+    return 0;
+}
+
+10.Check Pass or Fail :
+#include <stdio.h>
+int main() {
+    int mark;
+    printf("Enter mark: ");
+    scanf("%d",&mark);
+    if(mark>=40)
+        printf("Pass");
+    else
+        printf("Fail");
+    return 0;
+}
+
+11.Calculate Grade :
+#include <stdio.h>
+int main() {
+    int mark;
+    printf("Enter mark: ");
+    scanf("%d",&mark);
+    if(mark>=90)
+        printf("Grade A");
+    else if(mark>=80)
+        printf("Grade B");
+    else if(mark>=70)
+        printf("Grade C");
+    else if(mark>=60)
+        printf("Grade D");
+    else if(mark>=40)
+        printf("Grade E");
+    else
+        printf("Fail");
+    return 0;
+}
+
+12.Check Divisibility :
+#include <stdio.h>
+int main() {
+    int a,b;
+    printf("Enter number and divisor: ");
+    scanf("%d%d",&a,&b);
+    if(a%b==0)
+        printf("Divisible");
+    else
+        printf("Not Divisible");
+    return 0;
+}
+
+13.Find Profit or Loss :
+#include <stdio.h>
+int main() {
+    float cost,selling;
+    printf("Enter cost price and selling price: ");
+    scanf("%f%f",&cost,&selling);
+    if(selling>cost)
+        printf("Profit = %.2f",selling-cost);
+    else if(cost>selling)
+        printf("Loss = %.2f",cost-selling);
+    else
+        printf("No Profit No Loss");
+    return 0;
+}
+
+14.Calculate Electricity Bill :
+#include <stdio.h>
+int main() {
+    float units,bill;
+    printf("Enter units: ");
+    scanf("%f",&units);
+    if(units<=100)
+        bill=units*1.5;
+    else if(units<=200)
+        bill=100*1.5+(units-100)*2.5;
+    else
+        bill=100*1.5+100*2.5+(units-200)*4;
+    printf("Electricity Bill = %.2f",bill);
+    return 0;
+}
+
+15.Check Triangle Validity :
+#include <stdio.h>
+int main() {
+    int a,b,c;
+    printf("Enter three sides: ");
+    scanf("%d%d%d",&a,&b,&c);
+    if(a+b>c && a+c>b && b+c>a)
+        printf("Valid Triangle");
+    else
+        printf("Invalid Triangle");
+    return 0;
+}
+
+16. Find Type of Triangle:
+#include <stdio.h>
+int main() {
+    int a,b,c;
+    printf("Enter three sides: ");
+    scanf("%d%d%d",&a,&b,&c);
+    if(a+b<=c || a+c<=b || b+c<=a)
+        printf("Invalid Triangle");
+    else if(a==b && b==c)
+        printf("Equilateral Triangle");
+    else if(a==b || b==c || a==c)
+        printf("Isosceles Triangle");
+    else
+        printf("Scalene Triangle");
+    return 0;
+}
+
+
